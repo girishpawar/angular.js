@@ -44,9 +44,9 @@ property containing the string `'Hola!'` to the `$scope`:
 ```js
 var myApp = angular.module('myApp',[]);
 
-myApp.controller('GreetingController', ['$scope', function($scope) {
+myApp.controller('GreetingController', function($scope) {
   $scope.greeting = 'Hola!';
-}]);
+});
 ```
 
 We create an {@link module Angular Module}, `myApp`, for our application. Then we add the controller's
@@ -80,9 +80,9 @@ The following example uses a Controller to add a method to the scope, which doub
 ```js
 var myApp = angular.module('myApp',[]);
 
-myApp.controller('DoubleController', ['$scope', function($scope) {
+myApp.controller('DoubleController',  function($scope) {
   $scope.double = function(value) { return value * 2; };
-}]);
+});
 ```
 
 Once the Controller has been attached to the DOM, the `double` method can be invoked in an Angular
